@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADUC - Agents Dress Up Committee</title>
+    <meta name="description" content="ADUC is a local-first, mod-friendly UI for roleplay agent familiars. No telemetry. File-based CLI bridge. MIT licensed." />
+    <meta property="og:title" content="ADUC - Agents Dress Up Committee" />
+    <meta property="og:description" content="Local-first familiars for your workflow. File-based CLI bridge. MIT licensed." />
+    <meta name="theme-color" content="#111318" />
+    <link rel="stylesheet" href="aduc.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="ADUC home">ADUC</a>
+      <nav class="nav-links">
+        <a href="#why">Why</a>
+        <a href="#how">How</a>
+        <a href="#quickstart">Quickstart</a>
+        <a class="btn btn-primary" href="#download">Download</a>
+        <a href="nsfw.html" title="After Dark (18+)">After Dark</a>
+      </nav>
+    </header>
+
+    <main id="top" class="wrap">
+      <section class="hero">
+        <h1>Agents Dress Up Committee</h1>
+        <p class="tagline">Local-first familiars for your workflow. Ship code, not your data.</p>
+        <p class="note">PG-13 by default. Playful when you want it, focused when you need it.</p>
+        <div class="cta">
+          <a class="btn btn-primary btn-lg" href="#download">Download</a>
+          <a class="btn" href="#quickstart">Quickstart</a>
+        </div>
+        <p class="note">Playful, mod-friendly, and yours. MIT licensed.</p>
+      </section>
+
+      <section id="why" class="grid features">
+        <article>
+          <h3>No Cloud, No Telemetry</h3>
+          <p>Runs locally. Your files, your rules. Bring your own model or CLI agent.</p>
+        </article>
+        <article>
+          <h3>Modular Familiars</h3>
+          <p>Each familiar lives in a folder: <code>agent.md</code>, <code>personality.md</code>, <code>state.json</code>, and <code>avatar/*.png</code>.</p>
+        </article>
+        <article>
+          <h3>File-based CLI Bridge</h3>
+          <p>Simple JSON handoff in <code>&lt;temp&gt;/ADUC/conversation.json</code>. Any CLI can roleplay by appending replies.</p>
+        </article>
+        <article>
+          <h3>Emotion-Tagged Replies</h3>
+          <p>End responses with <code>&lt;emotion: focus&gt;</code>. UI swaps avatars automatically.</p>
+        </article>
+        <article>
+          <h3>Coach + Crush Vibes</h3>
+          <p>Your familiar keeps you on task, celebrates wins, and, with your opt-in, adds a playful tone. Work first; flirting later.</p>
+        </article>
+      </section>
+
+      <section id="how" class="how">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>
+            <strong>Pick a familiar</strong>
+            <p>Edit files in <code>familiars/&lt;name&gt;/</code> to change role, vibe, and visuals.</p>
+          </li>
+          <li>
+            <strong>Merge the prompt</strong>
+            <p>ADUC combines <code>agent.md</code> + <code>personality.md</code> + current <code>state.json.emotion</code> (+ optional memory, lore).</p>
+          </li>
+          <li>
+            <strong>Bridge to your CLI</strong>
+            <p>When the UI writes a user turn, your CLI appends a reply with an emotion tag.</p>
+          </li>
+        </ol>
+        <pre class="code"><code>// Minimal watcher (pseudocode)
+pending = turns.filter(t =&gt; t.role == 'user' &amp;&amp; t.status == 'pending')
+for (u of pending) append({ role: 'cli', in_reply_to: u.id,
+  text: 'Show me the code.\n&lt;emotion: focus&gt;' })
+</code></pre>
+      </section>
+
+      <section id="quickstart" class="quickstart">
+        <h2>Quickstart</h2>
+        <div class="qs-grid">
+          <div>
+            <h4>1) Install (Windows)</h4>
+            <pre class="code"><code>py -3 -m pip install --user -r requirements.txt</code></pre>
+          </div>
+          <div>
+            <h4>2) Launch</h4>
+            <pre class="code"><code>.\run_aduc_simple.bat 8080</code></pre>
+          </div>
+          <div>
+            <h4>3) Optional: CLI bridge</h4>
+            <pre class="code"><code>py tools/cli_bridge_watcher.py --familiar lumi</code></pre>
+          </div>
+        </div>
+        <p class="muted">Tip: Responses should end with a state line like <code>&lt;emotion: calm&gt;</code>.</p>
+      </section>
+
+      <section id="download" class="download">
+        <h2>Download</h2>
+        <p>Grab the code and run locally.</p>
+        <div class="dl-cta">
+          <a id="dlZip" class="btn btn-primary btn-lg" href="#" rel="noopener">Download .zip</a>
+          <a id="dlRepo" class="btn" href="#" rel="noopener">View on GitHub</a>
+        </div>
+        <p class="muted small">You can update these links later. Set <code>data-github</code> on the <code>&lt;body&gt;</code> or edit in HTML.</p>
+      </section>
+
+      <section class="safety">
+        <h2>Safety &amp; Boundaries</h2>
+        <ul>
+          <li><strong>Opt-in memory:</strong> only when users explicitly ask to remember.</li>
+          <li><strong>No unsolicited romance/NSFW:</strong> requires explicit toggles.</li>
+          <li><strong>Local-first:</strong> keep control of your data and vibes.</li>
+          <li><strong>After Dark (18+):</strong> see <a href="nsfw.html">nsfw.html</a> for the spicier pitch. Keep it off during screenshares.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <small>ADUC is MIT licensed. Built by Hivemind Studio. No telemetry.</small>
+    </footer>
+
+    <script src="aduc.js"></script>
+  </body>
+  </html>
