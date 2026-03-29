@@ -22,6 +22,14 @@
   document.head.appendChild(style);
 })();
 
+// Keep footer year current
+(function () {
+  const year = new Date().getFullYear();
+  const copyright = document.querySelector('.copyright');
+  if (!copyright) return;
+  copyright.textContent = `© ${year} Hivemind Studio`;
+})();
+
 // Boot-up terminal intro
 (function () {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -77,4 +85,3 @@
     setTimeout(typeNext, 240);
   }
 })();
-

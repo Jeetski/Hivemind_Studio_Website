@@ -76,6 +76,14 @@ body::after {
   text-align: center;
 }
 
+.brand-mark {
+  width: min(220px, 42vw);
+  height: auto;
+  display: block;
+  margin: 0 auto 0.75rem;
+  filter: drop-shadow(0 0 16px rgba(0, 181, 226, 0.35));
+}
+
 .brand {
   margin: 0 0 1rem;
   font-size: clamp(2.5rem, 7vw, 5.5rem);

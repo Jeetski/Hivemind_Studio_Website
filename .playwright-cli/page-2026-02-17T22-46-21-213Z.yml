@@ -1,0 +1,34 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e6]:
+    - generic [ref=e7]:
+      - heading "HIVEMIND STUDIO ▌" [level=1] [ref=e8]
+      - paragraph [ref=e9]:
+        - generic [ref=e10]: Systems that think.
+        - generic [ref=e11]: Worlds that bloom.
+        - generic [ref=e12]: Tools that dream with you.
+      - link "Enter the Lab" [ref=e13] [cursor=pointer]:
+        - /url: "#lab"
+        - text: ">> Enter the Lab"
+  - main [ref=e14]:
+    - region "The Lab Door" [ref=e15]:
+      - generic [ref=e16]:
+        - heading "The Lab Door" [level=2] [ref=e17]
+        - list [ref=e18]:
+          - listitem [ref=e19]:
+            - link ">> Metaplasma" [ref=e20] [cursor=pointer]:
+              - /url: https://www.metaplasma.online
+          - listitem [ref=e21]:
+            - link ">> Chronos Engine" [ref=e22] [cursor=pointer]:
+              - /url: https://www.chronosengine.online
+          - listitem [ref=e23]:
+            - link ">> Agents Dress Up Committee" [ref=e24] [cursor=pointer]:
+              - /url: aduc/aduc.html
+          - listitem [ref=e25]:
+            - link ">> Shinobi Tactics [ENTER]" [ref=e33] [cursor=pointer]:
+              - /url: https://www.shinobitactics.online
+          - listitem [ref=e27]: Scry (coming soon)
+          - listitem [ref=e28]: DODGE (coming soon)
+  - contentinfo [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]: David Cody
+      - generic [ref=e32]: © 2025 Hivemind Studio
