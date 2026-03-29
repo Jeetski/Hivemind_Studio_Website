@@ -67,7 +67,6 @@ a {
 .hero,
 .signal,
 .lab,
-.manifesto,
 .site-footer {
   position: relative;
   z-index: 2;
@@ -281,8 +280,7 @@ a {
 }
 
 .signal,
-.lab,
-.manifesto {
+.lab {
   padding: 0 1.25rem;
 }
 
@@ -309,8 +307,7 @@ a {
   text-shadow: var(--glow-cyan);
 }
 
-.signal-copy,
-.manifesto-item p {
+.signal-copy {
   margin: 0;
   font-family: "Inter", "Segoe UI", sans-serif;
   color: var(--muted);
@@ -326,8 +323,7 @@ a {
   padding-bottom: 4.5rem;
 }
 
-.lab .section-inner,
-.manifesto .section-inner {
+.lab .section-inner {
   text-align: center;
 }
 
@@ -471,46 +467,6 @@ a {
   content: none;
 }
 
-.manifesto {
-  padding-bottom: 5.5rem;
-}
-
-.manifesto-grid {
-  display: grid;
-  gap: 1.5rem;
-  margin-top: 1.4rem;
-  justify-items: center;
-}
-
-.manifesto-list {
-  display: grid;
-  gap: 1rem;
-  width: min(100%, 48rem);
-  justify-items: center;
-}
-
-.manifesto-item {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(73, 224, 255, 0.12);
-  text-align: center;
-  justify-items: center;
-}
-
-.manifesto-index {
-  color: #75dcec;
-}
-
-.manifesto-item h3 {
-  margin: 0 0 0.35rem;
-  font-size: 1rem;
-  color: #dffcff;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
 .site-footer {
   padding: 1.5rem 1.25rem 3rem;
   border-top: 1px solid rgba(73, 224, 255, 0.12);
@@ -638,10 +594,6 @@ a {
   .lab-desc {
     max-width: none;
     font-size: 0.93rem;
-  }
-
-  .manifesto-item {
-    grid-template-columns: 1fr;
   }
 }
 

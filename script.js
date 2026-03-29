@@ -9,7 +9,7 @@
     { threshold: 0.12 }
   );
 
-  document.querySelectorAll('.signal-inner, .lab-list li, .manifesto-item').forEach((el) => {
+  document.querySelectorAll('.signal-inner, .lab-list li').forEach((el) => {
     el.classList.add('reveal-on-scroll');
     observer.observe(el);
   });
