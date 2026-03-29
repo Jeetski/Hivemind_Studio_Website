@@ -25,43 +25,186 @@
       </div>
     </div>
     <header class="hero" id="top">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
       <div class="hero-inner">
-        <img
-          class="brand-mark"
-          src="public/Hivemind_Studio_No_Background.png"
-          alt="Hivemind Studio logo"
-        />
-        <h1 class="brand">HIVEMIND STUDIO</h1>
-        <p class="tagline">
-          <span>Systems that think.</span>
-          <span>Worlds that bloom.</span>
-          <span>Tools that dream with you.</span>
-        </p>
-        <a href="#lab" class="cta" aria-label="Enter the Lab">Enter the Lab</a>
+        <div class="hero-copy">
+          <div class="hero-kicker">Independent systems lab</div>
+          <img
+            class="brand-mark"
+            src="public/Hivemind_Studio_No_Background.png"
+            alt="Hivemind Studio logo"
+          />
+          <h1 class="brand">HIVEMIND STUDIO</h1>
+          <p class="tagline">
+            <span>Systems that think.</span>
+            <span>Worlds that bloom.</span>
+            <span>Tools that dream with you.</span>
+          </p>
+          <p class="hero-summary">
+            Hivemind Studio builds software with atmosphere: intelligent tools, audiovisual experiments,
+            and strange little systems with a point of view.
+          </p>
+          <div class="hero-actions">
+            <a href="#lab" class="cta" aria-label="Enter the Lab">Enter the Lab</a>
+            <a href="#signal" class="cta cta-secondary" aria-label="Read the Signal">Read the Signal</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Studio status">
+          <div class="hero-panel-label">Studio status</div>
+          <div class="hero-panel-grid">
+            <div class="hero-stat">
+              <span class="hero-stat-label">Mode</span>
+              <span class="hero-stat-value">Building</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-label">Focus</span>
+              <span class="hero-stat-value">Tools + worlds</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-label">Output</span>
+              <span class="hero-stat-value">Playable systems</span>
+            </div>
+          </div>
+          <p class="hero-panel-copy">
+            A small studio exploring productivity, terminal aesthetics, and reactive media through software.
+          </p>
+        </aside>
       </div>
     </header>
 
     <main>
+      <section class="signal" id="signal" aria-labelledby="signal-title">
+        <div class="section-inner signal-inner">
+          <div>
+            <p class="section-label">Signal</p>
+            <h2 id="signal-title">Code can be useful without being sterile.</h2>
+          </div>
+          <p class="signal-copy">
+            Hivemind Studio sits between product design, digital art, and terminal culture. The goal is not
+            more software. The goal is software with character.
+          </p>
+        </div>
+      </section>
+
       <section class="lab" id="lab" aria-labelledby="lab-title">
         <div class="section-inner">
+          <p class="section-label">Featured systems</p>
           <h2 id="lab-title">The Lab Door</h2>
           <ul class="lab-list" role="list">
-            <li><a class="lab-link" href="https://www.chronosengine.online" target="_blank" rel="noopener">Chronos Engine "Orchestrate your day with intelligence."</a></li>
-            <li><a class="lab-link" href="https://github.com/Jeetski/retrocore" target="_blank" rel="noopener">Retrocore "Turn your terminal into a CRT."</a></li>
-            <li><a class="lab-link" href="https://github.com/Jeetski/Oscimorph" target="_blank" rel="noopener">Oscimorph "Make audio-reactive visuals."</a></li>
-            <!-- <li><a class="lab-link" href="https://www.metaplasma.online" target="_blank" rel="noopener">Metaplasma</a></li> -->
-            <!-- <li><a class="lab-link" href="aduc/aduc.html">Agents Dress Up Committee</a></li> -->
-            <!-- <li><a class="lab-link" href="https://www.shinobitactics.online" target="_blank" rel="noopener">Shinobi Tactics</a></li> -->
-            <!-- <li>Scry (coming soon)</li> -->
-            <!-- <li>DODGE (coming soon)</li> -->
+            <li>
+              <a class="lab-link" href="https://www.chronosengine.online" target="_blank" rel="noopener">
+                <img class="lab-logo" src="public/chronos_engine.png" alt="Chronos Engine logo" />
+                <span class="lab-copy">
+                  <span class="lab-name">Chronos Engine</span>
+                  <span class="lab-desc">Orchestrate your day with intelligence.</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="lab-link" href="https://github.com/Jeetski/retrocore" target="_blank" rel="noopener">
+                <img class="lab-logo" src="public/retrocore.png" alt="Retrocore logo" />
+                <span class="lab-copy">
+                  <span class="lab-name">Retrocore</span>
+                  <span class="lab-desc">Turn your terminal into a CRT.</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="lab-link" href="https://github.com/Jeetski/Oscimorph" target="_blank" rel="noopener">
+                <img class="lab-logo" src="public/oscimorph.png" alt="Oscimorph logo" />
+                <span class="lab-copy">
+                  <span class="lab-name">Oscimorph</span>
+                  <span class="lab-desc">Make audio-reactive visuals.</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <div class="lab-link lab-link-disabled" aria-disabled="true">
+                <img class="lab-logo" src="public/metaplasma.png" alt="Metaplasma logo" />
+                <span class="lab-copy">
+                  <span class="lab-name">Metaplasma</span>
+                  <span class="lab-desc">Data-driven emergent symbolic systems engine.</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="lab-link lab-link-disabled" aria-disabled="true">
+                <img class="lab-logo" src="public/agents_dress_up_committee.png" alt="Agents Dress Up Committee logo" />
+                <span class="lab-copy">
+                  <span class="lab-name">Agents Dress Up Committee</span>
+                  <span class="lab-desc">Productivity, but make it sexy.</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="lab-link lab-link-disabled" aria-disabled="true">
+                <img class="lab-logo lab-logo-rounded" src="public/shinobi_tactics.jpg" alt="Shinobi Tactics logo" />
+                <span class="lab-copy">
+                  <span class="lab-name">Shinobi Tactics</span>
+                  <span class="lab-desc">Naruto tactical strategy simulation fan game.</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="lab-link lab-link-disabled" aria-disabled="true">
+                <span class="lab-copy">
+                  <span class="lab-name">SCRY</span>
+                  <span class="lab-desc">Symbolic computational & relational yield. Giving thought form.</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div class="lab-link lab-link-disabled" aria-disabled="true">
+                <span class="lab-copy">
+                  <span class="lab-name">DODGE</span>
+                  <span class="lab-desc">Data object-driven game engine.</span>
+                </span>
+              </div>
+            </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="manifesto" aria-labelledby="manifesto-title">
+        <div class="section-inner">
+          <p class="section-label">Approach</p>
+          <div class="manifesto-grid">
+            <div>
+              <h2 id="manifesto-title">Built with a studio mindset, not a template mindset.</h2>
+            </div>
+            <div class="manifesto-list" role="list">
+              <div class="manifesto-item" role="listitem">
+                <div class="manifesto-index">01</div>
+                <div>
+                  <h3>Systems first</h3>
+                  <p>Every project starts from behavior, not decoration.</p>
+                </div>
+              </div>
+              <div class="manifesto-item" role="listitem">
+                <div class="manifesto-index">02</div>
+                <div>
+                  <h3>Atmosphere matters</h3>
+                  <p>Interfaces should feel like somewhere, not just something.</p>
+                </div>
+              </div>
+              <div class="manifesto-item" role="listitem">
+                <div class="manifesto-index">03</div>
+                <div>
+                  <h3>Play is a tool</h3>
+                  <p>Experiments are part of the engine, not a distraction from it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <div class="signature">David Cody</div>
+        <div class="signature">David Cody / Hivemind Studio</div>
         <div class="copyright">&copy; 2025 Hivemind Studio</div>
       </div>
     </footer>

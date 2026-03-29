@@ -1,4 +1,4 @@
-// Small enhancement: reveal effect on scroll for lab items
+// Reveal sections and project rows as they enter view.
 (function () {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -9,17 +9,10 @@
     { threshold: 0.12 }
   );
 
-  document.querySelectorAll('.lab-list li').forEach((el) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(6px)';
-    el.style.transition = 'opacity 400ms ease, transform 400ms ease';
+  document.querySelectorAll('.signal-inner, .lab-list li, .manifesto-item').forEach((el) => {
+    el.classList.add('reveal-on-scroll');
     observer.observe(el);
   });
-
-  // When revealed, fade in
-  const style = document.createElement('style');
-  style.textContent = `.lab-list li.reveal{opacity:1 !important; transform:translateY(0) !important;}`;
-  document.head.appendChild(style);
 })();
 
 // Keep footer year current
@@ -38,7 +31,7 @@
   if (!boot || !log) return; // safety
 
   const lines = [
-    'HIVEMIND STUDIO v2025.0 :: initializing...\n',
+    'HIVEMIND STUDIO v2026.0 :: initializing...\n',
     'bios.ok  mem.check  [OK]\n',
     'neural_fabrics [ONLINE]\n',
     'synthetic_worlds [READY]\n',
@@ -84,4 +77,28 @@
     window.addEventListener('click', skip, { once: false });
     setTimeout(typeNext, 240);
   }
+})();
+
+// Subtle pointer motion in the hero to add depth without fighting the layout.
+(function () {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const hero = document.querySelector('.hero');
+  const orbA = document.querySelector('.hero-orb-a');
+  const orbB = document.querySelector('.hero-orb-b');
+
+  if (prefersReduced || !hero || !orbA || !orbB) return;
+
+  hero.addEventListener('pointermove', (event) => {
+    const rect = hero.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    orbA.style.transform = `translate(${x * 24}px, ${y * 18}px)`;
+    orbB.style.transform = `translate(${x * -18}px, ${y * -14}px)`;
+  });
+
+  hero.addEventListener('pointerleave', () => {
+    orbA.style.transform = '';
+    orbB.style.transform = '';
+  });
 })();
